@@ -1,32 +1,23 @@
 {
   "name": "bloomspace1",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grazielac/bloomspace1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grazielac/bloomspace1/issues"
+  },
+  "homepage": "https://github.com/grazielac/bloomspace1#readme",
   "dependencies": {
-    "@headlessui/react": "^2.2.9",
-    "@tailwindcss/vite": "^4.1.14",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "react-icons": "^5.5.0",
-    "react-router": "^7.9.4",
-    "tailwindcss": "^4.1.14"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.36.0",
-    "@types/react": "^19.1.16",
-    "@types/react-dom": "^19.1.9",
-    "@vitejs/plugin-react-swc": "^4.1.0",
-    "eslint": "^9.36.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.22",
-    "globals": "^16.4.0",
-    "vite": "^7.1.7"
+    "concurrently": "^9.2.1"
   }
 }
