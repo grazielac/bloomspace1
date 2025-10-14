@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "type": "module",
+    "start": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
