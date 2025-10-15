@@ -1,9 +1,9 @@
 export default function Header() {
   return (
     <>
-      <header className="p-4 border-b">
-        <div className="flex justify-between items-center cursor-pointer">
-          <h1 className="text-2xl font-bold">Bluméa</h1>
+      <header className="p-4 md:px-8 border-b">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center cursor-pointer">
+          <h1 className="text-2xl font-bold cursor-pointer">Bluméa</h1>
           <div>
             <img src="" alt="" />
           </div>
