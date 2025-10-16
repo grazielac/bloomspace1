@@ -1,10 +1,14 @@
+import React from "react";
+
+
 export default function Footer() {
   return (
     <>
       <div className="flex justify-between h-50 bg-gray-100 border rounded-tl-3xl rounded-tr-3xl">
         <div className="bg-amber-300">
           <img src="" alt="Bluméa logo" />
-          <p>Short bio about Bluméa</p>
+          <p className="text-sm">A hyper-local, curated hub for Barcelona creatives to discover events,
+             showcase their work, and connect with each other — all in one place.</p>
           {/* ICONS */}
         </div>
 
