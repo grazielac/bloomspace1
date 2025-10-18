@@ -1,9 +1,10 @@
 import { useState } from "react";
 import RegisterForm from "./RegisterForm";
+import LogInForm from "./LogInForm";
 
 export default function Header() {
   const [showModal, setShowModal] = useState(false);
-  const [showRegister, setShowRegister] = useState(false);
+  // const [showRegister, setShowRegister] = useState(false);
 
   return (
     <>
@@ -47,9 +48,9 @@ export default function Header() {
             </button>
             <button
               className="px-3 py-1 rounded-3xl bg-gray-500 text-white cursor-pointer"
-              onClick={() => {
-                setShowRegister(true);
-              }}
+              // onClick={() => {
+              //   setShowRegister(true);
+              // }}
             >
               Register
             </button>
@@ -58,7 +59,7 @@ export default function Header() {
       </header>
 
       {showModal && <RegisterForm onClose={() => setShowModal(false)} />}
-      {showRegister && <RegisterForm onClose={() => setShowRegister(false)} />}
+      {showModal && <LogInForm onClose={() => setShowModal(false)} />}
     </>
   );
 }

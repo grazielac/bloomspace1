@@ -25,7 +25,7 @@ export default function RegisterForm({ onClose }) {
   return (
     <>
       <Dialog open={true} onClose={onClose} className="relative z-50">
-        <div className="fixed inset-0 bg-black">
+        <div className="fixed inset-0 bg-black/30">
           <div className="fixed inset-0 flex items-center justify-center p-4">
             <DialogPanel className="bg-white rounded-3xl p-6 max-w-md w-full shadow-xl">
               <div className="bg-gray-200 border rounded-3xl h-full">
