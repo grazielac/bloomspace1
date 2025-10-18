@@ -4,8 +4,31 @@ import {
   SlSocialLinkedin,
   SlSocialFacebook,
 } from "react-icons/sl";
+import { supabase } from "../supabaseClient";
+import React, { useState } from "react";
 
 export default function LogInForm({ onClose }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+
+  async function signIn(e) {
+    e.preventDefault();
+
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+
+    if (error) {
+      console.error("Sign in error:", error.message);
+    } else {
+      console.log("Signed in:", data);
+      onClose();
+    }
+  }
+
+
   return (
     <>
       <Dialog open={true} onClose={onClose} className="relative z-50">
@@ -14,7 +37,7 @@ export default function LogInForm({ onClose }) {
             <DialogPanel className="bg-white p-6 max-w-md w-full rounded-2xl shadow-xl">
               <h2 className="text-xl font-bold mb-4">Log in to your Account</h2>
 
-              <form className="space-y-4">
+              <form onSubmit={signIn} className="space-y-4">
                 <label htmlFor="name">Name</label>
                 <input
                   type="text"
@@ -23,13 +46,17 @@ export default function LogInForm({ onClose }) {
                 />
                 <label htmlFor="email">Email</label>
                 <input
-                  type="text"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="johnsmith@gmail.com"
                   className="w-full border p-2 rounded"
                 />
                 <label htmlFor="password">Password</label>
                 <input
                   type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   placeholder="8+ characters"
                   className="w-full border p-2 rounded"
                 />
