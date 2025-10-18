@@ -3,8 +3,9 @@ import RegisterForm from "./RegisterForm";
 import LogInForm from "./LogInForm";
 
 export default function Header() {
-  const [showRegister, setShowRegister] = useState(false);
-  const [showLogin, setShowLogin] = useState(false);
+  // const [showRegister, setShowRegister] = useState(false);
+  // const [showLogin, setShowLogin] = useState(false);
+  const [modalType, setModalType] = useState(null);
 
   return (
     <>
@@ -40,17 +41,14 @@ export default function Header() {
 
             <button
               className="cursor-pointer"
-              onClick={() => 
-                setShowLogin(true)}
-           
+              onClick={() => setModalType("login")}
             >
               Sign in
             </button>
             <button
               className="px-3 py-1 rounded-3xl bg-gray-500 text-white cursor-pointer"
               onClick={() => {
-                setShowRegister(true);
-                setShowLogin(false);
+                setModalType("register");
               }}
             >
               Register
@@ -59,8 +57,17 @@ export default function Header() {
         </div>
       </header>
 
-      {showRegister && <RegisterForm onClose={() => setShowRegister(false)} />}
-      {showLogin && <LogInForm onClose={() => setShowLogin(false)} />}
+      {modalType === "login" && (
+        <LogInForm onClose={() => setModalType(null)} />
+      )}
+
+      {modalType === "register" && (
+        <RegisterForm onClose={() => setModalType(null)} />
+      )}
+
+      {/* {modalType === "forgotPassword" && (
+        <ForgotPasswordForm />
+      )} */}
     </>
   );
 }
