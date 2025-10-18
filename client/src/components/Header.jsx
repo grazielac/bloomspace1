@@ -48,9 +48,10 @@ export default function Header() {
             </button>
             <button
               className="px-3 py-1 rounded-3xl bg-gray-500 text-white cursor-pointer"
-              onClick={() => 
-                setShowRegister(true)
-              }
+              onClick={() => {
+                setShowRegister(true);
+                setShowLogin(false);
+              }}
             >
               Register
             </button>

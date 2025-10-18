@@ -36,7 +36,7 @@ export default function RegisterForm({ onClose }) {
               <h2 className="text-xl font-bold mb-4">Get Started</h2>
               <p>Welcome to Bluméa</p>
 
-              <form>
+              <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Name</label>
                 <input
                   type="text"
@@ -59,7 +59,7 @@ export default function RegisterForm({ onClose }) {
                   type="submit"
                   className="w-1/4 bg-amber-200 py-2 rounded-3xl mt-5"
                 >
-                  Login
+                  Register
                 </button>
               </form>
 
