@@ -36,13 +36,13 @@ export default function LogInForm({ onClose }) {
                 />
                 <button
                   type="submit"
-                  className="w-full bg-amber-200 py-2 rounded"
+                  className="w-1/4 bg-amber-200 py-2 rounded-3xl"
                 >
                   Login
                 </button>
               </form>
 
-              <div className="mt-10">
+              <div className="mt-10 flex gap-5">
                 <p>Create account with</p>
                 <div className="flex gap-4">
                   <div>
