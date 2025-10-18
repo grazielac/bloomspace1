@@ -5,12 +5,11 @@ import {
   SlSocialFacebook,
 } from "react-icons/sl";
 import { supabase } from "../supabaseClient";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function LogInForm({ onClose }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
 
   async function signIn(e) {
     e.preventDefault();
@@ -27,7 +26,6 @@ export default function LogInForm({ onClose }) {
       onClose();
     }
   }
-
 
   return (
     <>
