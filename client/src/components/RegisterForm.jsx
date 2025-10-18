@@ -1,5 +1,10 @@
 import { useState } from "react";
 import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
+import {
+  SlSocialGoogle,
+  SlSocialLinkedin,
+  SlSocialFacebook,
+} from "react-icons/sl";
 
 export default function RegisterForm({ onClose }) {
   console.log("onClose prop:", onClose);
@@ -25,37 +30,50 @@ export default function RegisterForm({ onClose }) {
   return (
     <>
       <Dialog open={true} onClose={onClose} className="relative z-50">
-        <div className="fixed inset-0 bg-black/30">
+        <div className="fixed inset-0 bg-blue-400/30">
           <div className="fixed inset-0 flex items-center justify-center p-4">
             <DialogPanel className="bg-white rounded-3xl p-6 max-w-md w-full shadow-xl">
-              <div className="bg-gray-200 border rounded-3xl h-full">
-                <div className=" border rounded-3xl flex bg-gray-300 h-3/6">
-                  <img src="" alt="" />
-                  <div className="bg-gray-400">
-                    <img src="" alt="" />
-                    <h2>Get Started</h2>
-                    <p>Welcome to Bluméa</p>
-                    <hr />
+              <h2 className="text-xl font-bold mb-4">Get Started</h2>
+              <p>Welcome to Bluméa</p>
 
-                    <form onSubmit={handleSubmit}>
-                      <label htmlFor="name">Name</label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formValues.name}
-                        onChange={handleInputChange}
-                      />
-                      <label htmlFor="email">Email</label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formValues.email}
-                        onChange={handleInputChange}
-                      ></input>
-                      <button type="submit">Submit</button>
-                    </form>
+              <form>
+                <label htmlFor="name">Name</label>
+                <input
+                  type="text"
+                  placeholder="Name"
+                  className="w-full border p-2 rounded"
+                />
+                <label htmlFor="email">Email</label>
+                <input
+                  type="text"
+                  placeholder="johnsmith@gmail.com"
+                  className="w-full border p-2 rounded"
+                />
+                <label htmlFor="password">Password</label>
+                <input
+                  type="password"
+                  placeholder="8+ characters"
+                  className="w-full border p-2 rounded"
+                />
+                <button
+                  type="submit"
+                  className="w-1/4 bg-amber-200 py-2 rounded-3xl mt-5"
+                >
+                  Login
+                </button>
+              </form>
+
+              <div className="mt-10 flex gap-5">
+                <p>Create account with</p>
+                <div className="flex gap-4">
+                  <div>
+                    <SlSocialGoogle size={26} />
+                  </div>
+                  <div>
+                    <SlSocialLinkedin size={26} />
+                  </div>
+                  <div>
+                    <SlSocialFacebook size={26} />
                   </div>
                 </div>
               </div>
