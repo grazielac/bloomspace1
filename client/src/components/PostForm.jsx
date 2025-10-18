@@ -1,4 +1,4 @@
-export default function PostItem() {
+export default function PostForm() {
     return (
         <>
             <div>
