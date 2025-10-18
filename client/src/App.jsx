@@ -10,7 +10,6 @@ function App() {
     <>
       <Header />
       <Hero />
-      <RegisterForm />
       <Footer />
       
     </>
