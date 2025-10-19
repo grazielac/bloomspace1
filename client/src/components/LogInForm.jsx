@@ -6,10 +6,13 @@ import {
 } from "react-icons/sl";
 import { supabase } from "../supabaseClient";
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
 export default function LogInForm({ onClose }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   async function signIn(e) {
     e.preventDefault();
@@ -24,6 +27,7 @@ export default function LogInForm({ onClose }) {
     } else {
       console.log("Signed in:", data);
       onClose();
+      navigate("/feed")
     }
   }
 

@@ -9,6 +9,9 @@ import {
 export default function RegisterForm({ onClose }) {
   console.log("onClose prop:", onClose);
 
+
+
+  
   const [formValues, setFormValues] = useState({
     name: "",
     email: "",

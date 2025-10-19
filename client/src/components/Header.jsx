@@ -1,6 +1,9 @@
 import { useState } from "react";
 import RegisterForm from "./RegisterForm";
 import LogInForm from "./LogInForm";
+import Feed from "./Feed";
+import { BrowserRouter as Router, Routes, Route } from "react-router";
+
 
 export default function Header() {
   // const [showRegister, setShowRegister] = useState(false);
